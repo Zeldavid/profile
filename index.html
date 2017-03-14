@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Web page about David Carrero that show the profile of David and his skills in web technologies">
+  <meta name="keywords" content="web developer, web design, David Carrero, portafolio, diseño web, maquetación, webmaster, front-end developer, desarrollador web, web layout"> 
+  <meta name="author" content="David Carrero">
+
+  <link rel="icon" type="image/png" href="img/icon_favicon.png">
+
+  <title>David Carrero</title>
+    <!--Font-Awesome css Toolkit-->
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Main css-->
+    <link type="text/css" rel="stylesheet" href="css/main.css"  media="screen,projection"/>
+ 
+
+</head>
+<div class="flex preloader">
+  <div class="flex_row preloader_wrap">
+    <div class="flex preloader_container">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+    <div class="preloader_text"><p class="raleway">David Carrero</p></div>
+  </div>
+</div>
+<body ng-controller="ctrlTraduce">
+
+  <!--WRAPPER-->
+  <div class="wrapper">
+
+    <!--Navigation bar-->
+    <header class="flex_row header">
+
+      <!--First Container Header-->
+      <div class="flex_column logo_container">
+        <!--Image Container-->
+        <div class="img_container">
+          <a class="" href="#home">
+            <img class="logo_image" src="img/logo_DC.png" alt="logo_image">
+          </a>  
+        </div>
+        <!--Text Container-->
+        <div class="text_container">
+          <p class="raleway">David Carrero</p>  
+        </div>
+      </div>
+
+      <!--Second Container Header-->
+      <div class="nav_container" id="my_nav_container">
+        <ul class="flex_row raleway">
+          <li><a href="#about">{{'ABOUT' | translate}}</a></li>
+          <li><a href="#skills">{{'SKILLS' | translate}}</a></li>
+          <li><a href="#contact">{{'CONTACT' | translate}}</a></li>
+        </ul>
+      </div>
+
+      <!--Third Container Header-->
+      <div class="social_container">
+        <ul class="flex_row">
+          <li class="display">
+            <a style="margin-top: 16px !important" class="raleway" href="" ng-click="changeLanguage('en')">English</a>
+          </li>
+          <li class="display" style="margin-top: 16px !important; color: #616161;" class="raleway"> &nbsp;&nbsp;/ </li>
+          <li class="display">
+            <a style="margin-top: 16px !important" class="raleway" href="" ng-click="changeLanguage('es')">Español</a>
+          </li>
+          <li class="display">
+            <a href="https://www.flickr.com/photos/138914971@N07/" target="blank">
+          <i class="fa fa-flickr fa-2x" aria-hidden="true"></i>
+          </a>
+          </li>
+          <li class="display">
+            <a href="https://github.com/Zeldavid" target="blank">
+              <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="display">
+            <a href="http://codepen.io/souls_d/" target="blank">
+              <i class="fa fa-codepen fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <!--Menu-->
+          <li class="icon">
+            <a href="javascript:void(0);" id="menu_btn"><i  class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+            <div class="flex_column raleway" id="responsive_menu">
+              <ul class="flex_column">
+                <li style="border-style: solid; border-width: 1px 0; border-color: #616161">
+                  <a href="#about" >{{'ABOUT' | translate}}</a>
+                </li>
+                <li style="border-bottom: 1px solid #616161">
+                  <a href="#skills" >{{'SKILLS' | translate}}</a>
+                </li>
+                <li>
+                  <a href="#contact">{{'CONTACT' | translate}}</a>
+                </li>
+              </ul>
+
+              <ul class="flex_row">
+                <li>
+                  <a style="margin-top: 16px !important" class="raleway" href="" ng-click="changeLanguage('en')">English</a>
+                </li>
+                <li style="margin-top: 16px !important; color: #616161;" class="raleway"> &nbsp;&nbsp;/ </li>
+                <li>
+                  <a style="margin-top: 16px !important" class="raleway" href="" ng-click="changeLanguage('es')">Español</a>
+                </li>
+              </ul>
+
+              <ul class="flex_row" style="align-self: center">
+                <li>
+                  <a href="https://www.flickr.com/photos/138914971@N07/" target="blank">
+                <i class="fa fa-flickr fa-2x" aria-hidden="true"></i>
+                </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Zeldavid" target="blank">
+                    <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://codepen.io/souls_d/" target="blank">
+                    <i class="fa fa-codepen fa-2x" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </header>
+    <!--Navigation bar-->
+
+    <!--FIRST CONTAINER-->
+    <div id="home" class="flex_row first_container shadow">
+    
+      <!--Dinamic Section-->
+      <section class="dinamic_container">
+          <div class="circle left"></div>
+          <div class="circle middle"></div>
+          <div class="circle right"></div>
+      </section>
+
+      <!--Content-->
+      <div class="text_content">
+        <!--FIRST-CONTENT-->
+        <section id="content_one">
+          <p class="text">{{'TEXT_ONE' | translate}}</p>
+        </section>
+        <!--SECOND-CONTENT-->
+        <section id="content_two">
+          <p class="text">{{'TEXT_TWO' | translate}}
+          <p class="cite">Steve Jobs</p>
+        </section>
+        <!--THIRD-CONTENT-->
+        <section id="content_three">
+          <p class="text">{{'TEXT_THREE' | translate}}</p>
+        </section>
+      </div>
+
+    </div>
+    <!--FIRST CONTAINER-->
+
+    <!--SECOND CONTAINER-->
+    <div id="about" class="flex_row second_container">
+      <section id="animation" class="flex_column raleway about" >
+        <h1>{{'ABOUT' | translate}}</h1>
+        <p>{{'PARAGRAPH' | translate}} 
+      </section>
+    </div>
+    <!--SECOND CONTAINER-->
+
+    <!-- First Separator-->
+    <div class="separator shadow">
+      <div class="first_img img_style"></div>
+    </div>
+    <!-- First Separator-->
+
+    <!--THIRD CONTAINER-->
+    <div id="skills" class="flex third_container" >
+      <!--Skills Container-->
+      <div class="skills_container">
+        <!--Title -->
+        <div class="flex">
+          <h1 class="raleway">{{'SKILLS' | translate}}</h1>
+        </div>
+
+        <!--Section Containers-->
+        <div class="flex_row">
+
+          <!--First Section -->
+          <section class="flex_row section">
+            <!--Image-->
+            <img class="logo" src="img/html5.png" alt="hmtl5_logo">
+
+            <!--Chart Container-->
+            <div class="flex chart_container">
+              <div class="lato" id="text_0">HMTL5</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="85">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+          <!--First Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/css3.png" alt="css3_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">CSS3</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="85">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+          <!--Second Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/js.png" alt="js_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">JavaScript</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="65">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+          <!--Third Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/json.png" alt="json_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">JSON</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="70">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+          <!--Fourth Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/jquery.png" alt="jquery_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">JQuery</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="50">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+          <!--Fifth Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/angular_js.png" alt="angular_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">AngularJS</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="50">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+          <!--Sixth Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/node_js.png" alt="node_js_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">NodeJS</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="35">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+          <!--Seventh Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/git.png" alt="git_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">Git</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="40">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+          <!--Eighth Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/sass.png" alt="sass_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">Sass</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="45">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+          <!--Nineth Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/less.png" alt="less_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">Less</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="45">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+          <!--Tenth Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/bootstrap.png" alt="bootstrap_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">Bootstrap</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="70">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+
+          <!--Tleventh Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/materialize.png" alt="materialize_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">Materialize</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="60">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+
+          <!--Twelfth Section -->
+          <section class="flex section">
+            <!--Image-->
+            <img class="logo" src="img/wordpress.png" alt="wordpress_logo">
+            <!--Chart Container-->
+            <div class="flex chart_container">
+            
+              <div class="lato" id="text_0">Wordpress</div>
+              <p class="chart_text" id="text_1">{{'BEGINNER' | translate}}</p>
+              <p class="chart_text" id="text_2">{{'FAMILIAR' | translate}}</p>
+              <p class="chart_text" id="text_3">{{'PROFICIENT' | translate}}</p>
+              <p class="chart_text" id="text_4">{{'EXPERT' | translate}}</p>
+              <p class="chart_text" id="text_5">{{'MASTER' | translate}}</p>
+              <!--Pie Chart-->
+              <div class="lato chart" data-percent="50">
+                <!--<span class="percent"></span>%-->
+              </div>
+
+            </div>
+          </section>
+
+
+        </div>
+        <!--Section Containers-->
+      </div>
+      <!--Main Container-->
+    </div>
+    <!--THIRD CONTAINER-->
+
+    <!-- Second Separator-->
+    <div class="separator shadow_2">
+      <div class="second_img img_style"></div>
+    </div>
+    <!-- Second Separator-->
+
+
+    <!--FOURTH CONTAINER-->
+    <div id="contact" class="flex fourth_container" >
+      <!-- Contact Container -->
+      <div  id="animation_2" class="contact">
+        <!-- Form -->
+        <form id="general_form" method="post" action="">
+          <!-- Form title -->
+          <div class="flex raleway form_title">{{'CONTACT' | translate}}</div>
+          <!-- Form body-->
+          <div class="flex_column form_body">
+            <p class="raleway error_message" id="name_message">{{'ERROR_MESSAGE' | translate}}</p>
+            <input type="text" style="width: 80%" class="lato input_style" maxlength="35" placeholder="{{'NAME' | translate}}" name="name" id="name">
+            <p class="raleway error_message" id="email_message">{{'ERROR_MESSAGE' | translate}}</p>
+            <input type="email" style="width: 80%" class="lato input_style" placeholder="{{'EMAIL' | translate}}" name="email" id="email">
+            <p class="raleway error_message" id="text_message">{{'ERROR_MESSAGE' | translate}}</p>
+            <textarea class="lato input_style" cols="30" rows="10" placeholder="{{'DESCRIPTION' | translate}}" name="text" id="text"></textarea>
+          </div>
+          <!-- Form footer-->
+          <div class="form_footer">
+            <!--<a class="raleway send_button" href="#" onclick="document.getElementById('general_form').submit();" type="submit">{{'SEND' | translate}}<span><i class="fa fa-paper-plane-o" aria-hidden="true"></i></span></a>-->
+
+            <a class="raleway send_button" href="#enviar" onclick="validation()" type="submit">{{'SEND' | translate}}<span><i class="fa fa-paper-plane-o" aria-hidden="true"></i></span></a>
+          </div>
+
+          <p class="raleway" id="confirmation_message">{{'CONFIRMATION_MESSAGE' | translate}}</p>
+
+          <div class="form_footer">
+            <a class="raleway send_button" href="pdf/RESUME_David_Carrero_Sepulveda.pdf" target="blank">{{'RESUME' | translate}}<span><i class="fa fa-download" aria-hidden="true"></i></span></a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--FOURTH CONTAINER-->
+
+    <!--Footer-->
+    <footer class="flex_row footer">
+      <p><span><i class="fa fa-copyright" aria-hidden="true"></i></span> <span id="date"></span> David Carrero. {{'RIGHTS' | translate}}.</p>
+    </footer>
+
+  </div>
+  <!--WRAPPER-->  
+
+
+  <!--FILES-->
+
+  <!--Jquery-->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+  <!--TweenMax Library & Plugins-->
+  <script src="bower_components/greensock-js/src/minified/TweenMax.min.js"></script>
+  <script src="bower_components/greensock-js/src/minified/plugins/ScrollToPlugin.min.js"></script>
+
+  <!--ScrollMagic Library & Plugins-->
+  <script src="bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+  <script src="bower_components/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+  <script src="bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+
+  <!--Easy Pie Chart Jquery-->
+  <script src="bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+  <!--Angular-->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+
+  <!--Scripts-->
+  <script src="js/translation.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/preloader.js"></script>
+  <script src="js/form.js"></script>
+
+  <!--Date Script-->
+  <script>
+    var date= new Date();
+    year = date.getFullYear();
+    document.getElementById("date").innerHTML = year;
+  </script>
+  
+</body>
+</html>
