@@ -6,6 +6,10 @@ $name = $_POST['name'];
 $mail = $_POST['email'];
 $text = $_POST['text']; 
 
+$name = strip_tags($name);
+$mail = strip_tags($mail);
+$text = strip_tags($text);
+
 $to = 'dvid_90_20@hotmail.com, dvid9020@gmail.com';
 $subject = 'contact from davidcarrero.co';
 
