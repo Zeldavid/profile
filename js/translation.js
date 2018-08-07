@@ -55,4 +55,107 @@ angular.module("myApp", ['pascalprecht.translate'])
     $scope.changeLanguage = function(language) {
         $translate.use(language);
     }
+    $scope.data = [{
+            "title": "JavaScript",
+            "percent": 85,
+            "imgSrc": "img/js.png",
+            "imgAlt": "js_logo",
+        },
+        {
+            "title": "Gulp",
+            "percent": 55,
+            "imgSrc": "img/gulp.png",
+            "imgAlt": "gulp_logo",
+        },
+        {
+            "title": "HTML5",
+            "percent": 88,
+            "imgSrc": "img/html5.png",
+            "imgAlt": "hmtl5_logo",
+        },
+        {
+            "title": "CSS3",
+            "percent": 88,
+            "imgSrc": "img/css3.png",
+            "imgAlt": "css3_logo",
+        },
+        {
+            "title": "JQuery",
+            "percent": 88,
+            "imgSrc": "img/jquery.png",
+            "imgAlt": "jquery_logo",
+        },
+        {
+            "title": "Java",
+            "percent": 55,
+            "imgSrc": "img/java.png",
+            "imgAlt": "java_logo",
+        },
+        {
+            "title": "Python",
+            "percent": 20,
+            "imgSrc": "img/python.png",
+            "imgAlt": "python_logo",
+        },
+        {
+            "title": "PHP",
+            "percent": 35,
+            "imgSrc": "img/php.png",
+            "imgAlt": "php_logo",
+        },
+        {
+            "title": "MySQL",
+            "percent": 55,
+            "imgSrc": "img/mysql.png",
+            "imgAlt": "mysql_logo",
+        },
+        {
+            "title": "Angular",
+            "percent": 64,
+            "imgSrc": "img/angular.png",
+            "imgAlt": "angular_logo",
+        },
+        {
+            "title": "Ionic",
+            "percent": 25,
+            "imgSrc": "img/ionic.png",
+            "imgAlt": "ionic_logo",
+        },
+        {
+            "title": "NodeJS",
+            "percent": 50,
+            "imgSrc": "img/node_js.png",
+            "imgAlt": "node_js_logo",
+        },
+        {
+            "title": "Git",
+            "percent": 58,
+            "imgSrc": "img/git.png",
+            "imgAlt": "git_logo",
+        },
+        {
+            "title": "Sass",
+            "percent": 66,
+            "imgSrc": "img/sass.png",
+            "imgAlt": "sass_logo",
+        },
+        {
+            "title": "Less",
+            "percent": 66,
+            "imgSrc": "img/less.png",
+            "imgAlt": "less_logo",
+        },
+        {
+            "title": "Bootstrap",
+            "percent": 75,
+            "imgSrc": "img/bootstrap.png",
+            "imgAlt": "bootstrap_logo",
+        },
+        {
+            "title": "Handlebars",
+            "percent": 55,
+            "imgSrc": "img/handlebars.png",
+            "imgAlt": "handlebars_logo",
+        },
+    ]
 })
