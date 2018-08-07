@@ -469,7 +469,6 @@ p {
 
 .section:hover {
     cursor: pointer;
-    opacity: 0.7;
 }
 
 
@@ -752,6 +751,16 @@ the topnav (li.icon) */
     ul li a:hover {
         color: #9e9e9e;
         border-bottom: 0px;
+    }
+}
+
+
+/* The "responsive" class is added to the opacity
+sections when the click is over this */
+
+@media screen and (min-width: 850px) {
+    .section:hover {
+        opacity: 0.7;
     }
 }
 
